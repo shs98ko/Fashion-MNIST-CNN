@@ -55,7 +55,7 @@ class SimpleConvNet:
         self.layers['Pool1'] = Pooling(pool_h=2, pool_w=2, stride=2)
         self.layers['Affine1'] = Affine(self.params['W2'], self.params['b2'])
         self.layers['Relu2'] = Relu()
-        self.layers['Dropout1'] = Dropout(0.25)
+        self.layers['Dropout1'] = Dropout(0.4)
         self.layers['Affine2'] = Affine(self.params['W3'], self.params['b3'])
 
         self.last_layer = SoftmaxWithLoss()

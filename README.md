@@ -28,16 +28,17 @@ Fashion-MNIST 의류 이미지 분류 프로젝트
 - Learning Rate: 0.001
 - Batch Size: 100
 - Epochs:25
+- weight_decay:1e-4
 - Filter Number:50
-- Hidden Size:200
-- Dropout:0.25
+- Hidden Size:150
+- Dropout:0.4
 
 ## Results
 
 ### Scratch
 
-- Train Accuracy:98.8%
-- Test Accuracy:92.22%
+- Train Accuracy:97.6%
+- Test Accuracy:91.17%
 
 ### PyTorch
 

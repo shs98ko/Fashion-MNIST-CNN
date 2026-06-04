@@ -71,10 +71,12 @@ class Trainer:
         for i in range(self.max_iter):
             self.train_step()
 
+        train_acc = self.network.accuracy(self.x_train, self.t_train)
         test_acc = self.network.accuracy(self.x_test, self.t_test)
-
+        
         if self.verbose:
             print("=============== Final Test Accuracy ===============")
+            print("train acc:" + str(train_acc))
             print("test acc:" + str(test_acc))
             
 
