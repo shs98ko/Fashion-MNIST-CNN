@@ -18,7 +18,28 @@ Fashion-MNIST 의류 이미지 분류 프로젝트
 ## Dataset
 
 - Fashion-MNIST
+- Train: 60,000 images
+- Test: 10,000 images
+- Image Size: 28×28 grayscale
+
+## Hyperparameters (Scratch)
+
+- Optimizer: Adam
+- Learning Rate: 0.001
+- Batch Size: 100
+- Epochs:
+- Filter Number:
+- Hidden Size:
+- Dropout:
 
 ## Results
-- Scratch Test Accuracy: 
-- PyTorch Test Accuracy: 
+
+### Scratch
+
+- Train Accuracy:
+- Test Accuracy:
+
+### PyTorch
+
+- Train Accuracy: 96.68%
+- Test Accuracy: 94.04%
