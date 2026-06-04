@@ -27,17 +27,17 @@ Fashion-MNIST 의류 이미지 분류 프로젝트
 - Optimizer: Adam
 - Learning Rate: 0.001
 - Batch Size: 100
-- Epochs:20
+- Epochs:25
 - Filter Number:50
 - Hidden Size:200
-- Dropout:0.3
+- Dropout:0.25
 
 ## Results
 
 ### Scratch
 
-- Train Accuracy:97.7%
-- Test Accuracy:91.84%
+- Train Accuracy:98.8%
+- Test Accuracy:92.22%
 
 ### PyTorch
 
