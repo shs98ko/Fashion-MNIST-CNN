@@ -16,6 +16,7 @@ from common.trainer import Trainer
 #x_test, t_test = x_test[:1000], t_test[:1000]
 
 max_epochs = 25
+loss_per_epoch = []
 
 network = SimpleConvNet(input_dim=(1,28,28), 
                         conv_param = {'filter_num': 32, 'filter_size': 5, 'pad': 0, 'stride': 1},
@@ -32,34 +33,29 @@ network.save_params("params.pkl")
 print("Saved Network Parameters!")
 
 # Accuracy 그래프
-plt.figure()
-
 markers = {'train': 'o', 'test': 's'}
-x = np.arange(len(trainer.train_acc_list))
-
+x = np.arange(max_epochs)
 plt.plot(x, trainer.train_acc_list, marker='o', label='train', markevery=2)
-
-plt.xlabel("Epoch")
-plt.ylabel("Accuracy")
+plt.plot(x, trainer.test_acc_list, marker='s', label='test', markevery=2)
+plt.xlabel("epochs")
+plt.ylabel("accuracy")
 plt.ylim(0, 1.0)
 plt.legend(loc='lower right')
-plt.title("Train/Test Accuracy")
-plt.grid()
 plt.show()
 
+iter_per_epoch = int(trainer.iter_per_epoch)
+for i in range(0, len(trainer.train_loss_list), iter_per_epoch):
+    loss_per_epoch.append(
+        np.mean(trainer.train_loss_list[i:i+iter_per_epoch])
+    )
 
 # Loss 그래프
-plt.figure()
-
-x = np.arange(len(trainer.train_loss_list))
-
-plt.plot(x, trainer.train_loss_list, label='train loss')
-
-plt.xlabel("Iteration")
+x = np.arange(len(loss_per_epoch))
+plt.plot(x, loss_per_epoch)
+plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.ylim(0, 1.0)
-plt.title("Training Loss")
-plt.legend()
+plt.title("Training Loss per Epoch")
 plt.grid()
 plt.show()
 
