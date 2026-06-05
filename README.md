@@ -9,8 +9,8 @@ Fashion-MNIST 의류 이미지 분류 프로젝트
 - 밑바닥부터 시작하는 딥러닝 소스를 활용한 CNN 구현
 - NumPy를 이용하여 Convolution, Pooling, Affine 계층 직접 사용
 - Adam Optimizer, Dropout, 하이퍼파라미터 튜닝 적용
-- 28×28 → Conv(50,5×5) → ReLU → Conv(50,5×5) → ReLU → MaxPool
-  → FC(128) → ReLU → Dropout(0.3) → FC(10) → Softmax
+- 28×28 → Conv(32,5×5) → ReLU → Conv(32,5×5) → ReLU → MaxPool
+  → FC(150) → ReLU → Dropout(0.3) → FC(10) → Softmax
 
 ### PyTorch
 
@@ -30,7 +30,6 @@ Fashion-MNIST 의류 이미지 분류 프로젝트
 - Learning Rate: 0.001
 - Batch Size: 100
 - Epochs:25
-- weight_decay:1e-4
 - Filter Number:32
 - Hidden Size:150
 - Dropout:0.3
