@@ -87,7 +87,7 @@ def _change_one_hot_label(X):
     return T
     
 
-def load_fasion_mnist(normalize=True, flatten=True, one_hot_label=False):
+def load_fashion_mnist(normalize=True, flatten=True, one_hot_label=False):
     """MNIST 데이터셋 읽기
     
     Parameters
